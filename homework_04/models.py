@@ -29,7 +29,7 @@ async_session = sessionmaker(
 )
 
 Base = declarative_base(cls=Base)
-Session = async_session()     
+Session = async_session     
 
 
 class User(Base):

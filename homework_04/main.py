@@ -29,7 +29,7 @@ async def async_main():
     
     await create_tables()
     
-    async with Session as session:
+    async with Session() as session:
         await create_users(session, *users_data)
         await create_posts(session, *posts_data)
 
