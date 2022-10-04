@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    О себе
+{% endblock %}
+
+{% block body %}
+    <div class="d-flex flex-column m-auto text-center">
+        <div class="text-center">
+            <p class="blockquote ">Меня зовут Анастасия. Я прохожу обучение в онлайн-школе "Otus".</p>
+
+            <p class="blockquote">Мой пусть в верстке только начинается, но...</p>
+
+            <p class="blockquote">Я верю в себя и в свои мощные программистские лапки!</p>
+
+            <h2 class="blockquote fs-3 mt-4">Спасибо за внимание!</h2>
+
+        </div>
+
+        <a href="{{ url_for('index_page') }}" class="mx-auto btn btn-primary btn-lg mt-2">Вернуться на Главную</a>
+
+    </div>
+
+
+{% endblock %}

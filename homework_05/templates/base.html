@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        {% block title %}
+            Base title
+        {% endblock %}
+    </title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css') }}">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-sm bg-light px-4">
+    <div class="navbar-nav me-auto">
+        {% for endpoint, label in [
+                  ('index_page', 'Главная'),
+                  ('about_page', 'О себе'),
+                  ] %}
+
+            {% set path = url_for(endpoint) %}
+
+            <li class="nav-item">
+                <a class="nav-link {{ 'active' if path == request.path else '' }}"
+                   href="{{ path }}">
+                    {{ label }}
+                </a>
+            </li>
+        {% endfor %}
+    </div>
+</nav>
+
+<div class="container flex-grow-1 d-flex flex-column">
+    {% block body %}
+        Base body
+    {% endblock %}
+
+    <footer class="my-3 text-center text-secondary">
+        <hr style="width: 500px; margin: 0 auto 20px"/>
+
+        Anastasia Samolovova &copy; 2022
+    </footer>
+</div>
+
+<script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+</body>
+</html>
