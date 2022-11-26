@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Posts
+{% endblock %}
+
+{% block body %}
+    {% if posts %}
+        <h1>List of posts:</h1>
+
+        <ul class="list-group">
+            {% for post in posts %}
+                <li class="list-group-item">
+                    <h2 class="text-decoration-none">
+                        {{ post.title }}
+                    </h2>
+                    <p>
+                         {{ post.body }}
+                    </p>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <h1>No posts yet</h1>
+    {% endif %}
+
+{% endblock %}

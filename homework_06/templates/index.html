@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Главная
+{% endblock %}
+
+{% block body %}
+    <div class="d-flex flex-column m-auto mt-0 text-center">
+        <img src="https://mapperassessoria.com.br/wp-content/uploads/2015/06/cliente-logo-my-place.jpg"
+             class="mx-auto" alt="..." height="300" width="300">
+        <h1>Главная страница</h1>
+        <h4>Это моя первая верстка для домашнего задания в школе <strong>"Otus"</strong></h4>
+        <h5 class="mt-4">Для более подробной информации нажмите на кнопку <u>О себе</u></h5>
+
+        <a href="{{ url_for('about_page') }}" class="mx-auto btn btn-primary btn-lg mt-2">О себе</a>
+
+    </div>
+{% endblock %}

@@ -1,0 +1,24 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+aiohttp = "==3.8.1"
+aiosignal = "==1.2.0"
+attrs = "==22.1.0"
+sqlalchemy = "==1.4.41"
+yarl = "==1.8.1"
+psycopg2 = "==2.9.4"
+SQLAlchemy = "==1.4.41"
+flask = "==2.2.2"
+flask-migrate = "==3.1.0"
+Flask-SQLAlchemy = "==2.5.1"
+Flask-WTF = "==1.0.1"
+WTForms = "==3.0.1"
+psycopg2-binary = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.10"
